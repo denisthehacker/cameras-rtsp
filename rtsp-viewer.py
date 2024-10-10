@@ -1,7 +1,8 @@
 import cv2
+import os
 
 Login = 'root'
-Password = 'Deni$2001!'
+Password = os.environ.get('CAMERA_PASSWORD')
 
 cap = cv2.VideoCapture(f"rtsp://{Login}:{Password}@10.10.30.2:554/cam_1")
 
